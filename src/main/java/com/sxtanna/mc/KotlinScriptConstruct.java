@@ -95,7 +95,9 @@ public final class KotlinScriptConstruct
 		builder.append(script.getClasses().isEmpty() ? "// none"  : String.join("\n", script.getClasses())).append('\n');
 
 
+		builder.append("val params = bindings[\"params\"] as Array<String>").append('\n');
 		builder.append("val player = bindings[\"player\"] as Player").append('\n');
+		builder.append("val plugin = bindings[\"plugin\"] as Plugin").append('\n');
 
 		builder.append(script.getScript()).append('\n');
 
